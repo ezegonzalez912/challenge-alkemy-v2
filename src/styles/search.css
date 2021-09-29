@@ -4,7 +4,7 @@
     padding: 10px;
     height: auto;
     display: grid;
-    grid-template-rows: .5fr 5fr;
+    grid-template-rows: 5fr;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -94,6 +94,32 @@
 .search-back-btn a{
     text-decoration: none;
     color: white;
+}
+
+.pagination{
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+
+.pagination button{
+    background: none;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 16px;
+    color: #4C22B0;
+    font-weight: 500;
+}
+
+.form-error-message{
+    text-align: center;
+    width: 100%;
+    color: rgb(238, 86, 59);
+    margin-top: 5px;
 }
 
 @media (max-width: 600px) {

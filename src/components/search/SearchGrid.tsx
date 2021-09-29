@@ -8,13 +8,11 @@ interface Props {
 
 export const SearchGrid: React.FC<Props> = ({heroes, load}) => {
 
-    if(load){
-        return <div className='spinner' />
-    }
-
     return (
         <div className="search_grid">
             {
+                load ? <div className='spinner' />
+                :
                 heroes ? heroes.map( (hero:Hero) => (
                     (hero.powerstats.intelligence !== "null") && 
                     <HeroCard key={hero.id} hero={hero} />

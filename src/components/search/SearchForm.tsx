@@ -19,10 +19,12 @@ export const SearchForm: React.FC<Props> = ({handleSubmit}) => {
             <h1>Search <span className="fw-400">Hero</span></h1>
             <Formik initialValues={{search: ''}} onSubmit={handleSubmit} validate={valiidatesField}>
                 {({isSubmitting}) => (
-                <Form className="search-form">
-                    <Field className="form-control" placeholder="Batman" name="search" autoComplete="off"/>
-                    <button className="btn-primary" type="submit" disabled={isSubmitting}>Search</button>
-                    <ErrorMessage name="search"/>
+                <Form>
+                    <div className="search-form">
+                        <Field className="form-control" placeholder="Batman" name="search" autoComplete="off"/>
+                        <button className="btn-primary" type="submit" disabled={isSubmitting}>Search</button>
+                    </div>
+                    <ErrorMessage name="search" className="form-error-message" component="p"/>
                 </Form>
                 )}
             </Formik>

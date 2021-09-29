@@ -19,15 +19,15 @@ export const SearchScreen = () => {
     return (
         <div className="search_screen">
             <SearchForm handleSubmit={handleSubmit}/>
-            <SearchGrid heroes={filtered} load={load}/>
             {
                 heroes.length > 16 &&
-                <div>
-                    <button onClick={prevPage}>Back</button>
+                <div className="pagination">
+                    <button onClick={prevPage}>Back page</button>
                     <p>{currentPage + 1} of {quantityPages}</p>
-                    <button onClick={nextPage}>Next</button>
+                    <button onClick={nextPage}>Next page</button>
                 </div>
             }
+            <SearchGrid heroes={filtered} load={load}/>
             <button className="btn-primary search-back-btn">
                 <Link to="/">Back to my team</Link>
             </button>

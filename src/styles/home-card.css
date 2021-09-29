@@ -1,0 +1,123 @@
+.add-hero-card-container{
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+    border-radius: 20px;
+    width: 400px;
+    height: 270px;
+    color: #4C22B0;
+    border: 1px solid #4C22B0;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bar-1, .bar-2{
+    position: absolute;
+    background: #4C22B0;
+    width: 6px;
+    height: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.bar-2{
+    transform: rotate(90deg);
+}
+
+.add-hero-card-container:hover{
+    border: 1px solid #4C22B0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.herocard-container{
+    background: white;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    justify-content: space-between;
+    align-self: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+}
+
+.herocard_img-remove{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 10px;
+}
+
+.herocard_img-remove img{
+    border-radius: 10px;
+    height: 210px;
+    width: 100%;
+}
+
+.herocard_info-more{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.hero-stats-list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-stats-list p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.hero-stats-list_item{
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.hero-stats-list_item p{
+    width: 110px; 
+}
+
+@media (max-width:450px){
+    .herocard-container{
+        width: 100%;
+        height: auto;
+    }
+    .herocard-container button{
+        font-size: 10px;
+        padding: 5px;
+    }
+    .herocard_info-more{
+        font-size: 10px;
+    }
+    .herocard_info-more p{
+        font-size: 10px;
+    }
+    .herocard_img-remove img{
+        height: 100%;
+    }
+    .add-hero-card-container{
+        background: white;
+        display: flex;
+        justify-content: center;
+        width: 80vw;
+    }
+}

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 
 export const usePagination =<T> (initState:T[], maxElements:number) => {
 
-    const [ filtered, setFiltered ] = useState(initState)
+    const [ filtered, setFiltered ] = useState<T[]>(initState)
     const [ currentPage, setCurrentPage ] = useState<number>(0)
 
     const quantityOfElements = currentPage * maxElements

@@ -18,7 +18,7 @@ export const HeroCard: React.FC<Props> = ({hero}) => {
         setHero(hero)
     }
 
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState<string>("");
 
     const { heroes, alignment } = myTeam;
 

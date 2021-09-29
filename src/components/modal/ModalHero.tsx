@@ -2,7 +2,7 @@ import { Hero } from "../../types/interfaces";
 import { ModalHeroStatItem } from "./ModalHeroStatItem";
 
 interface Props {
-    hero: Hero,
+    hero: Hero | null,
     isChangeModal: () => void
 }
 

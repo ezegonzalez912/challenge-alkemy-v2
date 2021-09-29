@@ -3,10 +3,9 @@
     min-height: 90vh;
     padding: 10px;
     height: auto;
-    display: grid;
-    grid-template-rows: 5fr;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: relative;
 }

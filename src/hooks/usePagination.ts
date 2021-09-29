@@ -21,9 +21,9 @@ export const usePagination =<T> (initState:T[], maxElements:number) => {
     }
 
     useEffect(() => {
-        const newElements = initState.slice(currentPage, quantityOfElements + maxElements);
+        const newElements = initState.slice(quantityOfElements, quantityOfElements + maxElements);
         setFiltered(newElements)
     }, [currentPage, initState, maxElements, quantityOfElements])
 
-    return {filtered, currentPage, prevPage ,nextPage, quantityPages, setCurrentPage}
+    return {filtered, currentPage, prevPage, nextPage, quantityPages, setCurrentPage}
 }

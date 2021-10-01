@@ -1,10 +1,10 @@
 import { useHeroes } from '../../hooks/useHeroes'
 import { Link } from 'react-router-dom';
-import { SearchForm } from './SearchForm';
-import { SearchGrid } from './SearchGrid';
+import { SearchGrid } from '../feectures/HeroesList';
 import { usePagination } from '../../hooks/usePagination';
 import { FormikValues } from 'formik';
-import { PaginationControls } from './PaginationControls';
+import { PaginationControls } from '../feectures/PaginationControls';
+import { SearchHeroesForm } from '../feectures/SearchHeroesForm';
 
 export const SearchScreen = () => {
 
@@ -19,7 +19,7 @@ export const SearchScreen = () => {
 
     return (
         <div className="search_screen">
-            <SearchForm handleSubmit={handleSubmit}/>
+            <SearchHeroesForm handleSubmit={handleSubmit}/>
             {
                 heroes.length > 16 && <PaginationControls 
                     currentPage={currentPage} 
@@ -30,7 +30,7 @@ export const SearchScreen = () => {
             }
             <SearchGrid heroes={filtered} load={load}/>
             <button className="btn-primary search-back-btn">
-                <Link to="/">Back to my team</Link>
+                <Link to="/myteam">Back to my team</Link>
             </button>
         </div>
     )

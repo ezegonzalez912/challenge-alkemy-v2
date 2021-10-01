@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { HeroesContext } from "../../../context/heroes/HeroesContext"
+import { HeroesContext } from "../../context/heroes/HeroesContext"
 
 interface Props {
     value: number,
@@ -7,7 +7,7 @@ interface Props {
     title: string
 }
 
-export const StatPromedy: React.FC<Props> = ({value, unit, title}) => {
+export const AparencePromedy: React.FC<Props> = ({value, unit, title}) => {
 
     const { myTeam } = useContext(HeroesContext)
 

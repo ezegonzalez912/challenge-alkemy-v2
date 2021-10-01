@@ -5,7 +5,7 @@ interface Props {
     name: string
 }
 
-export const StatCircle: React.FC<Props> = ({value, name}) => {
+export const CircleStyleStats: React.FC<Props> = ({value, name}) => {
 
     const percentage = (num: number) => {
         return (num / 600) * 100

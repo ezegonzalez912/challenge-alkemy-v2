@@ -1,9 +1,9 @@
 import { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { HeroesContext } from '../../../context/heroes/HeroesContext';
-import { Hero } from '../../../types/interfaces';
-import { AddHeroCard } from './AddHeroCard';
-import { HeroCard } from './HeroCard';
+import { HeroesContext } from '../../context/heroes/HeroesContext';
+import { Hero } from '../../types/interfaces';
+import { AddHeroCardMyTeam } from '../cards/AddHeroCardMyTeam';
+import { HeroCardMyTeam } from '../cards/HeroCardMyTeam';
 
 export const MyTeam = () => {
 
@@ -17,14 +17,14 @@ export const MyTeam = () => {
             <div className="hero_team-grid">
                 {
                     heroes.map( (hero:Hero) => (
-                        <HeroCard key={hero.id} hero={hero} />
+                        <HeroCardMyTeam key={hero.id} hero={hero} />
                     ))
                     
                 }
                 {
                     heroes.length < 6 && 
-                        <Link to="/search">
-                            <AddHeroCard/>
+                        <Link to="/addheroes">
+                            <AddHeroCardMyTeam/>
                         </Link>
                 }
             </div>

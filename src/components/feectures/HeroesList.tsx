@@ -1,5 +1,5 @@
 import { Hero } from '../../types/interfaces'
-import { HeroCard } from './HeroCard'
+import { HeroCardSearch } from '../cards/HeroCardSearch'
 
 interface Props {
     heroes: Hero[],
@@ -15,7 +15,7 @@ export const SearchGrid: React.FC<Props> = ({heroes, load}) => {
                 :
                 heroes ? heroes.map( (hero:Hero) => (
                     (hero.powerstats.intelligence !== "null") && 
-                    <HeroCard key={hero.id} hero={hero} />
+                    <HeroCardSearch key={hero.id} hero={hero} />
                 ))
                 : <p>No results found.</p>
             }

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
-import { LoginScreen } from '../components/login/LoginScreen'
+import { LoginScreen } from '../components/pages/LoginScreen'
 import { AuthContext } from '../context/auth/AuthContext'
 import { DashboardRoutes } from './DashboardRoutes'
 import { PrivateRoute } from './PrivateRoute'

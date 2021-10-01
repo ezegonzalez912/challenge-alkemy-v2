@@ -4,7 +4,7 @@ interface Props {
     handleSubmit: (values: FormikValues, {setSubmitting}:any) => void;
 }
 
-export const SearchForm: React.FC<Props> = ({handleSubmit}) => {
+export const SearchHeroesForm: React.FC<Props> = ({handleSubmit}) => {
 
     const valiidatesField = (values:FormikValues) => {
         const errors:FormikErrors<FormikValues> = {}

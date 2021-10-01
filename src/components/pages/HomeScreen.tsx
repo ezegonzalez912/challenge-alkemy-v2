@@ -1,12 +1,12 @@
-import { MyTeam } from './myTeam/MyTeam'
-import { StatsTeam } from './statsTeam/StatsTeam'
+import { MyTeam } from '../feectures/MyTeam'
+import { StatsCard } from '../cards/StatsCard'
 
 export const HomeScreen = () => {
     
     return (
         <div className="home_screen">
             <MyTeam />
-            <StatsTeam />
+            <StatsCard />
         </div>
     )
 }

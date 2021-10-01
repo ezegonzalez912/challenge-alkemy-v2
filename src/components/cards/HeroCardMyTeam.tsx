@@ -1,15 +1,16 @@
 import { useContext } from 'react'
-import { HeroesContext } from '../../../context/heroes/HeroesContext';
-import { ModalContext } from '../../../context/modal/ModalContext';
-import { Hero } from '../../../types/interfaces';
-import { types } from '../../../types/types';
-import { HeroStatsList } from './HeroStatsList';
+import { HeroesContext } from '../../context/heroes/HeroesContext';
+import { ModalContext } from '../../context/modal/ModalContext';
+import { Hero } from '../../types/interfaces';
+import { types } from '../../types/types';
+import { StatsList } from '../stats/StatsList';
+
 
 interface Props {
     hero: Hero
 }
 
-export const HeroCard: React.FC<Props> = ({hero}) => {
+export const HeroCardMyTeam: React.FC<Props> = ({hero}) => {
 
     const { dispatch } = useContext(HeroesContext);
     const { setHero, isChangeModal } = useContext(ModalContext)
@@ -35,7 +36,7 @@ export const HeroCard: React.FC<Props> = ({hero}) => {
             </div>
             <div className="herocard_info-more">
                 <h3>{name}</h3>
-                <HeroStatsList powerstats={powerstats}/>
+                <StatsList powerstats={powerstats}/>
                 <button className="btn-primary" onClick={moreStats}>More stats</button>         
             </div>
         </div>

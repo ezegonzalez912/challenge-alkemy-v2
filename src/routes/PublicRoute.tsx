@@ -15,7 +15,7 @@ export const PublicRoute: React.FC<Props> = ({
         <Route {...rest}
             component={ (props: JSX.Element) => (
                 !isAuthenticated ? <Component {...props} />
-                : <Redirect to="/"/>
+                : <Redirect to="/myteam"/>
             )}
         />
     )

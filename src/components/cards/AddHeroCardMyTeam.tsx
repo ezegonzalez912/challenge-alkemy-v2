@@ -1,4 +1,4 @@
-export const AddHeroCard = () => {
+export const AddHeroCardMyTeam = () => {
     return (
         <div className="add-hero-card-container">
             <div className="bar-1"/>

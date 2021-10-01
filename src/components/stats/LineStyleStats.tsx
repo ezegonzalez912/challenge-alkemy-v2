@@ -5,7 +5,7 @@ interface Props {
     title: string
 }
 
-export const HeroCardStatItem: React.FC<Props> = ({value, title}) => {
+export const LineStyleStats: React.FC<Props> = ({value, title}) => {
 
     const valueCheck:number = parseInt(value)
 

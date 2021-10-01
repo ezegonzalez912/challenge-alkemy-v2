@@ -8,7 +8,7 @@ export const Navbar = () => {
     return (
         <div className="Navbar">
             <h3>Hi <span className="fw-400">alkemer!</span></h3>
-            <NavLink to="/">HEROES APP</NavLink>
+            <NavLink to="/myteam">HEROES APP</NavLink>
             <p onClick={handleLogout}>Logout</p>
         </div>
     )
